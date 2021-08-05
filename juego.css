@@ -1,0 +1,98 @@
+body{
+    width: 99.999999vw;
+    background-image: url("espacio.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    }
+
+.principal{
+    background-color: yellow;
+    padding: 2em;
+    border-radius: 1em;
+}
+#main{
+    margin-top: 8%;
+}
+
+#palabra{
+    display: flex;
+    align-content: space-around ;
+    justify-content: center;
+    color: white;
+    background-color: black;
+    font-size: 4em;
+    height: 20vh;
+    border-radius: 0.8em;
+    flex-wrap: wrap;
+}
+#palabra span {
+    height: 80%;
+    margin-left: 0.1em;
+    margin-right: 0.1em;
+    vertical-align: middle
+}
+
+#letras {
+    height: max-content;
+    background-color: rgb(182, 164, 8);
+    border-radius: 0.66em;
+    padding-top: 1.3em;
+    padding-bottom: 1.3em;
+    font-size: 1em;
+}
+
+.letra{
+    width: 10.5%;
+    font-size:2rem ;
+    height: min-content;
+    display:inline-block;
+    border:0.1rem solid #000000;
+    margin:0 0.2rem 0.2rem 0;
+    border-radius:0.12rem;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-family:'Roboto',sans-serif;
+    font-weight:300;
+    color:#000000;
+    text-shadow: 0 0.04rem 0.04rem rgba(0,0,0,0.35);
+    background-color:#FFFFFF;
+    text-align:center;
+    transition: all 0.15s;
+    }
+   
+    
+.letra:hover{
+text-shadow: 0 0 2em rgba(255,255,255,1);
+color:#FFFFFF;
+border-color:#FFFFFF;
+}
+
+@media (max-width: 800px){
+    *{font-size: 10px;}
+
+    #slots{
+        height: 40%;
+        font-size-adjust: inherit;
+    }
+
+
+    .letra{
+        width: 10.5%;
+        font-size:2rem ;
+        height: min-content;
+        display:inline-block;
+        border:0.1rem solid #000000;
+        margin:0 0.2rem 0.2rem 0;
+        border-radius:0.12rem;
+        box-sizing: border-box;
+        text-decoration:none;
+        font-family:'Roboto',sans-serif;
+        font-weight:300;
+        color:#000000;
+        text-shadow: 0 0.04rem 0.04rem rgba(0,0,0,0.35);
+        background-color:#FFFFFF;
+        text-align:center;
+        transition: all 0.15s;
+        }
+}
