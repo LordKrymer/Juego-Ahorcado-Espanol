@@ -66,23 +66,36 @@ function verificar(){
         boton[0].style.backgroundColor="green";
     }
     else {
-        Gvidas[Gvidas.indexOf("fa-heart")] = "fa-heart-broken";
-        crearVidas();
-        vidas--;
-        if (vidas != 0){
-            let boton = document.querySelectorAll('[data-id =' + letra +']');
-            boton[0].removeEventListener("click",verificar);
-            boton[0].style.backgroundColor="red";
-        }
-        else{
-            document.getElementById('letras').innerHTML="GAME OVER"
-        }
+        perderVida();
     }
+    verificarVictoria();
+}
+
+
+
+function perderVida(){
+    Gvidas[Gvidas.indexOf("fa-heart")] = "fa-heart-broken";
+    crearVidas();
+    vidas--;
+    if (vidas != 0){
+        let boton = document.querySelectorAll('[data-id =' + letra +']');
+        boton[0].removeEventListener("click",verificar);
+        boton[0].style.backgroundColor="red";
+    }
+    else{
+        document.getElementById('letras').innerHTML="GAME OVER"
+    }
+}
+
+
+function verificarVictoria(){
     if (palabra.indexOf("_") == -1){
         let tag = document.createElement("p");
         let texto = document.createTextNode("Felicidades!!!");
         tag.appendChild(texto);
-        document.getElementById("palabra").appendChild(tag);
+        document.getElementById('letras').innerHTML=""
+        document.getElementById("letras").appendChild(tag);
+        
     }
 }
 
@@ -108,5 +121,7 @@ function reiniciar (){
     crearLetras();
     palabraVacia();
     mostrarPalabra();
+    Gvidas=["fa-heart","fa-heart","fa-heart","fa-heart","fa-heart"];
+    vidas=5;
     crearVidas();
 }

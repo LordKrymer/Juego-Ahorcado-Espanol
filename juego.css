@@ -16,6 +16,7 @@ body{
 }
 
 #palabra{
+    height: max-content;
     display: flex;
     align-content: space-around ;
     justify-content: center;
@@ -25,6 +26,10 @@ body{
     height: 20vh;
     border-radius: 0.8em;
     flex-wrap: wrap;
+}
+#vidas{
+    height: 2rem;
+    font-size: 2rem;
 }
 #palabra span {
     height: 80%;
@@ -49,7 +54,7 @@ body{
     display:inline-block;
     border:0.1rem solid #000000;
     margin:0 0.2rem 0.2rem 0;
-    border-radius:0.12rem;
+    border-radius:0.22rem;
     box-sizing: border-box;
     text-decoration:none;
     font-family:'Roboto',sans-serif;
@@ -66,6 +71,78 @@ body{
 text-shadow: 0 0 2em rgba(255,255,255,1);
 color:#FFFFFF;
 border-color:#FFFFFF;
+}
+
+.wrapper {
+	height: 50px;
+	width: 165px;
+	-webkit-tap-highlight-color: transparent;
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+}
+
+button {
+	height: 100%;
+	width: 90%;
+	cursor: pointer;
+	background-color: #08e1ae;
+	background-image: linear-gradient(315deg, #08e1ae 0%, #98de5b 74%);
+	border: none;
+	border-radius: 50px 50px 30px 30px;
+	transition: 1s;
+	box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+}
+
+button:active {
+	border: none;
+	outline: none;
+}
+
+button a {
+	font-family: 'Fredoka One', cursive;
+	font-size: 30px;
+	text-decoration: none;
+	color: rgba(37, 61, 29, 0.7);
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+}
+
+button:hover {
+	border-radius: 100px 100px 20px 20px;
+	height: 45px;
+	width: 165px;
+}
+
+button:hover .scale {
+	letter-spacing: 5px;
+	font-size: 25px;
+	transition: 1s;
+}
+
+.rotate-1, .rotate-2, .rotate-3, .rotate-4 {
+	transition: 1s;
+}
+
+button:hover .rotate-1 {
+	transform: rotate(15deg);
+}
+
+button:hover .rotate-2 {
+	transform: rotate(-15deg);
+}
+
+button:hover .rotate-3 {
+	transform: rotate(10deg);
+}
+
+button:hover .rotate-4 {
+	transform: rotate(-25deg);
+}
+
+button:active {
+	filter: hue-rotate(90deg);
 }
 
 @media (max-width: 800px){
